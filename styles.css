@@ -1,6 +1,5 @@
 body {
     display: grid;
-    flex-direction: column;
     font-style:oblique;
     background-color: #F8F0E5;
     margin: 0;
@@ -14,7 +13,12 @@ header {
     background-color: #EADBC8;
     height: 15vh;
     align-items: center;
-    width: 100%;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
 }
 nav ul {
     height: 15vh;
@@ -38,8 +42,7 @@ nav ul li:hover{
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: 0.7s;
-
+   transition: 0.5s;
    border-top: 10px solid #FF770F;
 }
 
@@ -56,6 +59,7 @@ footer {
     justify-content: space-between;
     font-size: larger;
     height: fit-content;
+    position: relative;
 }
 #logo {
     height: 15vh;
@@ -87,7 +91,7 @@ footer p {
     row-gap: 30px;
     width: fit-content;
     max-width: 90vw;
-    margin-top: 40px;
+    margin-top: 20vh;
     margin-bottom: 40px;
 }
 .container img {
@@ -122,6 +126,45 @@ p {
     margin: 10px;
     margin-bottom: 20px;
     font-size: larger;
+}
+.hero {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20vh;
+    height: 73vh;
+    min-height: fit-content;
+    margin-bottom: 25vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    padding: 40px;
+    height: fit-content;
+    background-color: #DAC0A3;
+    border-radius: 15px;
+    border: 5px solid #EADBC8;
+}
+button{
+    margin-top: 5vh;
+    width: 50%;
+    height: 40px;
+    align-self: center;
+    border-radius: 10px;
+    background-color: #F8F0E5;
+    border: none;
+}
+button:hover {
+    background-color: #FF770F;
+    transition: 0.8s ease-in;
+    cursor: pointer;
+}
+button:active{
+    background-color: white;
+    transition: none;
+}
+label {
+    margin-top: 10px;
 }
 @media (max-width: 900px) {
     .container {

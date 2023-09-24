@@ -9,14 +9,14 @@
 </head>
 <body>
 <nav>
-  <header>
+  <header onscroll="handleScroll" id="mainHeader">
     
     <a href="index.html"><img src="logo.png" alt="logo" id="logo"></a>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Order</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
   </header>
@@ -72,5 +72,28 @@
 
   </footer>
 <script src="https://kit.fontawesome.com/1110e8d06e.js" crossorigin="anonymous"></script>
+<script>
+  let isScrolling = false;
+  let prevScrollY = window.scrollY;
+
+  function handleScroll() {
+    const header = document.getElementById('mainHeader');
+
+    if (window.scrollY > prevScrollY) {
+      // Scrolling down
+      header.style.transition = 'transform 0.5s ease';
+      header.style.transform = 'translateY(-15vh)';
+    } else {
+      // Scrolling up
+      header.style.transition = 'transform 0.5s ease';
+      header.style.transform = 'none';
+    }
+
+    prevScrollY = window.scrollY;
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  
+</script>
 </body>
 </html>
