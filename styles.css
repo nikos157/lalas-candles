@@ -4,6 +4,9 @@ body {
     font-style:oblique;
     background-color: #F8F0E5;
     margin: 0;
+    padding: 0;
+    width: 100%;
+
 }
 header {
     display: flex;
@@ -11,6 +14,7 @@ header {
     background-color: #EADBC8;
     height: 15vh;
     align-items: center;
+    width: 100%;
 }
 nav ul {
     height: 15vh;
@@ -82,6 +86,7 @@ footer p {
     column-gap: 30px;
     row-gap: 30px;
     width: fit-content;
+    max-width: 90vw;
     margin-top: 40px;
     margin-bottom: 40px;
 }
